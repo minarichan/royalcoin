@@ -15,12 +15,17 @@ A fixed-supply ERC-20 token built with Foundry and OpenZeppelin.
 - **OpenZeppelin ERC-20:** built on audited, widely used code instead of custom token logic.
 
 ## Getting started 
-''' bash
-git clone -recursive https://github.com/minarichan/royalcoin.git 
+```bash
+
+git clone --recursive https://github.com/minarichan/royalcoin.git
+
 cd royalcoin
+
 forge build
+
 forge test -vv
-'''
+
+```
 
 ## Tests
 Tests cover metadata, initial supply, transfers and failed transfers on insufficient balance.
