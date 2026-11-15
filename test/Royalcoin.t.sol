@@ -5,7 +5,7 @@ import {Test} from "forge-std/Test.sol";
 import {Royalcoin} from "../src/Royalcoin.sol";
 
 contract RoyalcoinTest is Test {
-    Royalcoin token; 
+    Royalcoin token;
     address alice = makeAddr("alice");
     address bob = makeAddr("bob");
 
@@ -25,7 +25,7 @@ contract RoyalcoinTest is Test {
 
     function test_Transfer() public {
         token.transfer(alice, 100 ether);
-        assertEq(token.balanceOf(alice),100 ether);
+        assertEq(token.balanceOf(alice), 100 ether);
     }
 
     function test_RevertWhen_NotEnoughBalance() public {
