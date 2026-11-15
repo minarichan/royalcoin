@@ -1,66 +1,29 @@
-## Foundry
+# Royalcoin (XVII)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+![CI}](https://github.com/minarichan/royalcoin/actions/workflows/test.yml/badge.svg)
 
-Foundry consists of:
+A fixed-supply ERC-20 token built with Foundry and OpenZeppelin.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Overview 
+- **Name / symbol:** Royalcoin / XVII
+- **Supply:** 1,000,000,000 XVII, minted once to the deployer
+- **Decimals:** 18
 
-## Documentation
+# Design decisions
+- **Fixed supply:** there is not mint function, so the supply can never grow.
+- **No admin keys:** there is no owner, pause or blacklist, no one can freexe or seize tokens.
+- **OpenZeppelin ERC-20:** built on audited, widely used code instead of custom token logic.
 
-https://book.getfoundry.sh/
+## Getting started 
+''' bash
+git clone -recursive https://github.com/minarichan/royalcoin.git 
+cd royalcoin
+forge build
+forge test -vv
+'''
 
-## Usage
+## Tests
+Tests cover metadata, initial supply, transfers and failed transfers on insufficient balance.
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## License
+MIT
