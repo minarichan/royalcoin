@@ -35,7 +35,7 @@ contract RoyalcoinTest is Test {
     }
 
     // --- Allowances ---
-    
+
     function test_ApproveAndTransferFrom() public {
         token.approve(alice, 50 ether);
         assertEq(token.allowance(address(this), alice), 50 ether);
@@ -43,7 +43,6 @@ contract RoyalcoinTest is Test {
         token.transferFrom(address(this), bob, 30 ether);
         assertEq(token.balanceOf(bob), 30 ether);
         assertEq(token.allowance(address(this), alice), 20 ether);
-
     }
 
     function test_RevertWhen_TransferFromWithoutAllowance() public {
@@ -60,7 +59,6 @@ contract RoyalcoinTest is Test {
         token.transfer(alice, amount);
         assertEq(token.balanceOf(alice), amount);
         assertEq(token.balanceOf(address(this)), before - amount);
-
     }
 
     // --- Supply never changes after transfers ---
@@ -69,7 +67,6 @@ contract RoyalcoinTest is Test {
         amount = bound(amount, 0, token.totalSupply());
         token.transfer(alice, amount);
         assertEq(token.totalSupply(), 1000000000 ether);
-        
     }
 }
 
