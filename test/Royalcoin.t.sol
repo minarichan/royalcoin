@@ -19,7 +19,7 @@ contract RoyalcoinTest is Test {
     }
 
     function test_DeployerGetsFullSupply() public view {
-        assertEq(token.totalSupply(), 1000000000 ether);
+        assertEq(token.totalSupply(), 1_000_000_000 ether);
         assertEq(token.balanceOf(address(this)), token.totalSupply());
     }
 
