@@ -30,6 +30,9 @@ forge test -vv
 ## Tests
 Tests cover metadata, initial supply, transfers and failed transfers on insufficient balance.
 
+## Coverage
+`src/Royalcoin.sol`: 100% lines, statements and functions (`forge coverage`).
+
 ## Deployment 
 Sepolia: [0x1b61E824295E5593863DD6995a430fb5b1BDBD9e](https://sepolia.etherscan.io/address/0x1b61E824295E5593863DD6995a430fb5b1BDBD9e)
 
